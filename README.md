@@ -1,16 +1,73 @@
-🚀Project Overview:
+# 🏢 Employee Payroll System 💰
 
-This project is built around the core principles of Object-Oriented Programming (OOP) in Java, providing a solid foundation for understanding abstraction, inheritance, and polymorphism. At its heart, it features an abstract Employee class that serves as the blueprint for different employee types. This class defines common attributes and behaviors that are shared by all employee types, such as name, id, and calculateSalary().
+## 📌 Overview
 
-The project further demonstrates inheritance and polymorphism through its concrete subclasses, FullTimeEmployee and PartTimeEmployee, which extend the Employee class. Each subclass implements its own salary calculation logic, showcasing how different employee types can have their own unique implementations while sharing common behaviors.
+The **Payroll Management System** is a Java-based application designed to manage employee payroll. It supports both full-time and part-time employees, allowing for salary calculations based on employment type. The system also provides functionalities to add, remove, and display employee details.
+
+## 🚀 Features
+
+- **👥 Employee Management**: Supports both full-time and part-time employees.
+- **💵 Salary Calculation**:
+  - 🏢 Full-time employees have a fixed monthly salary.
+  - ⏳ Part-time employees are paid based on hours worked and hourly rate.
+- **🛠️ CRUD Operations**:
+  - ➕ Add employees to the payroll.
+  - ❌ Remove employees based on their ID.
+  - 📄 Display employee details.
+- **🧑‍💻 Object-Oriented Approach**: Implements abstraction and inheritance.
+
+## 🛠️ Technologies Used
+
+- **☕ Java** (OOP principles)
+- **📂 Collections Framework** (ArrayList for managing employees)
 
 
-🚀Key Features:
 
-Abstract Employee class that defines shared behaviors and attributes.
 
-Subclasses (FullTimeEmployee, PartTimeEmployee) with custom salary calculation methods.
+## 🔍 Classes and Responsibilities
 
-Clear demonstration of OOP principles: abstraction, inheritance, polymorphism, and encapsulation.
+### 1. `Employee` (Abstract Class) 🏢
 
-Intuitive terminal interface for easy data entry, manipulation, and salary computation.
+- **Attributes**: `name`, `id`
+- **Methods**: `calculateSalary()` (abstract), `getName()`, `getId()`, `toString()`
+
+### 2. `FullTimeEmployee` (Extends `Employee`) 💼
+
+- **Attribute**: `monthlySalary`
+- **Implements** `calculateSalary()` returning a fixed monthly salary.
+
+### 3. `PartTimeEmployee` (Extends `Employee`) ⏳
+
+- **Attributes**: `hoursWorked`, `hourlyRate`
+- **Implements** `calculateSalary()` by multiplying hours worked with the hourly rate.
+
+### 4. `PayrollSystem` 📊
+
+- Uses `ArrayList<Employee>` to store employees.
+- **Provides methods to**:
+  - ✅ `addEmployee(Employee employee)`: Add an employee to the payroll.
+  - ❌ `removeEmployee(int id)`: Remove an employee using their ID.
+  - 📋 `displayEmployee()`: Print all employee details.
+
+## ▶️ How to Run
+
+1. **Compile the Java files**:
+   ```sh
+   javac com/pack1/*.java
+   ```
+2. **Run the ****`PayrollSystem`**** class**:
+   ```sh
+   java com.pack1.PayrollSystem
+   ```
+
+
+## 🔮 Future Enhancements
+
+- 🖥️ Implement a graphical user interface (GUI) for better interaction.
+- 🗄️ Integrate database support for persistent data storage.
+- 🔄 Add additional employee types (e.g., contract-based employees).
+
+## ✍️ Author
+
+- **Prathamesh Shelke** 🚀
+
